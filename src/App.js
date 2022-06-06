@@ -3,7 +3,7 @@ import "./styles.css";
 
 export default function App() {
   const [playerTurn, changePlayerTurn] = useState("red");
-  const [column, changeColumn] = useState(['red','yellow',]);
+  const [column, changeColumn] = useState(["red", "yellow"]);
 
   function dropSlotInColumn() {
     if (column.length < 6) {
@@ -21,8 +21,7 @@ export default function App() {
     }
   }
 
- 
-  function Column(){
+  function Column() {
     return (
       <div className="blue" onClick={dropSlotInColumn}>
         <div className={`slot ${column[5]}`}></div>
@@ -32,18 +31,16 @@ export default function App() {
         <div className={`slot ${column[1]}`}></div>
         <div className={`slot ${column[0]}`}></div>
       </div>
-    )
+    );
   }
 
-  
- const board,updateBoard = useState([[], [], [], [], [], [], []]);
+  //const board,updateBoard = useState([[], [], [], [], [], [], []]);
 
   return (
     <div className="App">
-      <Column/>
-      <Column/>
+      <Column />
+      <Column />
       It is {playerTurn}'s turn{" "}
     </div>
   );
 }
-
